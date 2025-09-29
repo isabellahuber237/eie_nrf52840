@@ -1,0 +1,55 @@
+git commit
+- Description: Saves changes in your staging area to the local repository.
+- Common arguments: 
+    - -m "message" → add a commit message
+    - -a → automatically stage tracked files
+- Notes: `git commit` without `-m` will open an editor to type the message.
+
+git branch
+- Description: Lists, creates, or deletes branches.
+- Common arguments:
+    - branch_name → creates a new branch with that name
+    - -d branch_name → deletes the specified branch
+- Notes: With no arguments, it lists all branches.
+
+git checkout
+- Description: Switches branches or restores files.
+- Common arguments:
+    - branch_name → switch to that branch
+    - -b branch_name → create and switch to a new branch
+- Notes: Behavior changes depending on arguments: with a branch name it switches, with `-b` it creates + switches.
+
+git pull
+- Description: Fetches changes from the remote repository and merges them into your local branch.
+- Common arguments:
+    - origin branch_name → specify the remote and branch
+    - --rebase → rebase local commits on top of remote changes
+- Notes: `git pull` is essentially `git fetch` + `git merge` (or `--rebase`).
+
+git push
+- Description: Sends your local commits to a remote repository.
+- Common arguments:
+    - origin branch_name → push a specific branch to the remote
+    - -u → set upstream tracking
+- Notes: Without arguments, it pushes the current branch to its upstream.
+
+git merge
+- Description: Combines changes from another branch into the current branch.
+- Common arguments:
+    - branch_name → merges the specified branch into the current branch
+    - --no-ff → forces a merge commit even if a fast-forward is possible
+- Notes: Only merges into the current branch; the branch being merged stays unchanged.
+
+git rebase
+- Description: Moves or “replays” commits from one branch onto another.
+- Common arguments:
+    - branch_name → rebase current branch onto the specified branch
+    - --interactive / -i → allows interactive editing of commits
+- Notes: Changes commit history; should be used carefully on shared branches.
+
+git fetch
+- Description: Downloads commits, files, and refs from a remote repository without merging them.
+- Common arguments:
+    - origin → specify the remote
+    - --all → fetch from all remotes
+- Notes: Unlike `git pull`, it does not merge; it only updates your remote tracking branches.
