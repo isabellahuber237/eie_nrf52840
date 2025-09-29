@@ -53,3 +53,24 @@ git fetch
     - origin → specify the remote
     - --all → fetch from all remotes
 - Notes: Unlike `git pull`, it does not merge; it only updates your remote tracking branches.
+
+git add
+- Description: Stages changes in your working directory so they can be committed.
+- Common arguments:
+    - file_name → stage a specific file
+    - . → stage all changes in the current directory
+- Notes: Only stages changes, does not commit.
+
+git status
+- Description: Shows the status of your working directory and staging area.
+- Notes: Tells you which files are staged, unstaged, or untracked.
+
+git log
+- Description: Shows the commit history for the current branch.
+- Common arguments:
+    - --oneline → shows each commit in a single line
+    - --graph → shows a visual branch structure
+- Notes: Useful to see what changes have been made and by whom.
+
+git push -u <branch>
+- Note: The -u flag sets the upstream (tracking) branch, so future git push and git pull commands can omit the branch name.
